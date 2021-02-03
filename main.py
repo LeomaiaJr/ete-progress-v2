@@ -65,3 +65,5 @@ if ete_calendar.check_today():
 
         twitter_provider = TwitterProvider()
         twitter_provider.tweet_sth(info)
+else:
+    print("Nothing to post today...")        
