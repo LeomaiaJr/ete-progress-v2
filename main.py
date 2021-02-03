@@ -37,7 +37,9 @@ sdays_left_percent = calc_percent(ete_calendar.sdays, ete_calendar.sdays_left)
 
 if ete_calendar.check_today():
     if sdays_left_percent == 0 and ete_calendar.sdays_left != 0:
-        pass
+        print("Percentage is 100% but it's not the last day, not posting...")
+    elif ed == sdays_left_percent:
+        print("Same percentage as yesterday, nothing posting...")
     else:
         update_data = {
             "eteProgressData": {
